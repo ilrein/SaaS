@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'subscriptions/new'
+
   get 'pages/index', as: ''
 
   get 'join' => 'pages#join'
