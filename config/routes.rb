@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
   get 'pages/index', as: ''
-
   get 'join' => 'pages#join'
-
   get 'hiw' => 'pages#hiw'
-
   get 'testimonials' => 'pages#testimonials'
 
   root to: 'pages#index'
+  resources :charges
 
   devise_for :users
   
