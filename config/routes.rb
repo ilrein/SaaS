@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'pages/index', as: ''
+
+  get 'join' => 'pages#join'
+
+  get 'hiw' => 'pages#hiw'
+
+  get 'testimonials' => 'pages#testimonials'
+
+  root to: 'pages#index'
+
+  devise_for :users
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
